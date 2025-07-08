@@ -26,7 +26,7 @@ MAIN_WALLPAPER_FILE=${WALLPAPERS_DIR}/${OS_NAME}_wallpaper.png
 
 # Update
 
-apt update --fix-broken
+apt update
 
 # Install GUI
 
