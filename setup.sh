@@ -11,13 +11,17 @@ OS_NAME="Cyberia"
 GUI_SYS_CONFIG_DIR=/etc/skel/.config/pcmanfm-qt/lxqt/
 GUI_USR_CONFIG_DIR=.config/pcmanfm-qt/lxqt/
 GUI_REP_CONFIG_DIR=./
+LXQT_USR_CONFIG_DIR=.config/lxqt/
+LXQT_REP_CONFIG_DIR=./
 WALLPAPERS_DIR=/usr/share/images/desktop-base/
 
 # Files
 
 GUI_SYS_CONFIG_FILE=${GUI_SYS_CONFIG_DIR}/settings.conf
 GUI_USR_CONFIG_FILE=${GUI_USR_CONFIG_DIR}/settings.conf
-GUI_REP_CONFIG_FILE=${GUI_REP_CONFIG_DIR}/lxqt_settings.conf
+GUI_REP_CONFIG_FILE=${GUI_REP_CONFIG_DIR}/pcmanfm_settings.conf
+LXQT_USR_CONFIG_FILE=${LXQT_USR_CONFIG_DIR}/lxqt.conf
+LXQT_REP_CONFIG_FILE=${LXQT_REP_CONFIG_DIR}/lxqt.conf
 MAIN_WALLPAPER_FILE=${WALLPAPERS_DIR}/${OS_NAME}_wallpaper.png
 
 # Update
@@ -84,6 +88,12 @@ apt install -y \
 for user in $( ls /home );do
 	usermod -aG sudo $user
 	usermod -aG wireshark $user
+done
+
+# Configure Themes
+
+for user in $( ls /home );do
+	cp $LXQT_REP_CONFIG_FILE $LXQT_USR_CONFIG_FILE
 done
 
 # Configure wallpaper
