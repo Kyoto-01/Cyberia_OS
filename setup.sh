@@ -6,24 +6,6 @@ set -e
 
 OS_NAME="Cyberia"
 
-# Directories
-
-GUI_REP_CONFIG_DIR=./gui
-PCMANFM_USR_CONFIG_DIR=.config/pcmanfm-qt/lxqt
-LXQT_USR_CONFIG_DIR=.config/lxqt
-WALLPAPERS_DIR=/usr/share/images/desktop-base
-
-# Files
-
-GUI_SYS_CONFIG_FILE=${GUI_SYS_CONFIG_DIR}/settings.conf
-GUI_USR_CONFIG_FILE=${GUI_USR_CONFIG_DIR}/settings.conf
-GUI_REP_CONFIG_FILE=${GUI_REP_CONFIG_DIR}/pcmanfm_settings.conf
-LXQT_USR_CONFIG_FILE=${LXQT_USR_CONFIG_DIR}/lxqt.conf
-LXQT_REP_CONFIG_FILE=${LXQT_REP_CONFIG_DIR}/lxqt.conf
-LXQT_USR_PANEL_FILE=${LXQT_USR_CONFIG_DIR}/panel.conf
-LXQT_REP_PANEL_FILE=${LXQT_REP_CONFIG_DIR}/lxqt_panel.conf
-MAIN_WALLPAPER_FILE=${WALLPAPERS_DIR}/${OS_NAME}_wallpaper.png
-
 # Update
 
 apt update
@@ -34,8 +16,6 @@ apt install -y \
 	lxqt-core \
 	lightdm \
 	pcmanfm-qt 
-
-mkdir -p $GUI_SYS_CONFIG_DIR
 
 # Install common utils
 
@@ -53,8 +33,6 @@ apt install -y \
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 apt --fix-broken install -y ./google-chrome-stable_current_amd64.deb
-
-rm -f google-chrome-stable_current_amd64.deb
 
 # Install network utils
 
@@ -84,6 +62,10 @@ apt install -y \
 	exiftool \
 	lynx
 
+# Clone repository
+
+git clone https://github.com/Kyoto-01/Cyberia_OS.git
+
 # Configure groups
 
 for user in $( ls /home );do
@@ -91,24 +73,30 @@ for user in $( ls /home );do
 	usermod -aG wireshark $user
 done
 
-# Configure Themes
+# Configure Theme
 
 for user in $( ls /home );do
-	cp $LXQT_REP_CONFIG_FILE /home/$user/$LXQT_USR_CONFIG_FILE
-	cp $LXQT_REP_PANEL_FILE /home/$user/$LXQT_USR_PANEL_FILE
+	cp ./Cyberia_OS/config/lxqt/lxqt.conf /home/$user/.config/lxqt/
+	cp ./Cyberia_OS/config/lxqt/panel.conf /home/$user/.config/lxqt/
 done
 
 # Configure wallpaper
 
-PCMANFM_LXQT_SYS_CONFIG_DIR=/etc/skel/.config/pcmanfm-qt/lxqt
+mkdir -p /etc/skel/.config/pcmanfm-qt/lxqt/
 
-cp wallpaper.png $MAIN_WALLPAPER_FILE
+cp ./Cyberia_OS/images/wallpaper.png /usr/share/images/desktop-base/${OS_NAME}_wallpaper.png
 
-cp ./gui/ $GUI_SYS_CONFIG_FILE
+cp ./Cyberia_OS/config/pcmanfm-qt/settings.conf /etc/skel/.config/pcmanfm-qt/lxqt/
 
 for user in $( ls /home );do
-	cp $GUI_REP_CONFIG_FILE /home/$user/$GUI_USR_CONFIG_FILE
+	cp ./Cyberia_OS/config/pcmanfm-qt/settings.conf /home/$user/.config/pcmanfm-qt/lxqt/
 done
+
+# Delete temporary files
+
+rm -rf \
+	Cyberia_OS/ \
+	google-chrome-stable_current_amd64.deb
 
 # Reboot
 
