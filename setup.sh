@@ -26,7 +26,8 @@ apt install -y \
 	sudo \
 	vim \
 	git \
-	bash-completion
+	bash-completion \
+	man-db
 
 # Install Google Chrome
 
@@ -53,8 +54,46 @@ apt install -y \
 # Install dev utils
 
 apt install -y \
+	make \
 	build-essential \
-	manpages-dev
+	manpages-dev \
+	libssl-dev \
+	zlib1g-dev \
+	libbz2-dev \
+	libreadline-dev \
+	libsqlite3-dev \
+	llvm \
+	libncursesw5-dev \
+	xz-utils \
+	tk-dev \
+	libxml2-dev \
+	libxmlsec1-dev \
+	libffi-dev \
+	liblzma-dev
+
+# Install Pyenv
+
+mkdir -p /opt/pyenv/
+groupadd pyenv
+usermod -aG pyenv root
+chown root:pyenv /opt/pyenv
+chmod g+s /opt/pyenv
+
+git clone https://github.com/pyenv/pyenv.git /opt/pyenv
+git clone https://github.com/pyenv/pyenv-virtualenv.git /opt/pyenv/plugins/pyenv-virtualenv
+
+mkdir /opt/pyenv/shims
+chmod -R g+w /opt/pyenv/shims
+
+echo 'export PYENV_ROOT="/opt/pyenv"' >> /etc/profile
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> /etc/profile
+echo 'eval "$(pyenv init --path)"' >> /etc/profile
+echo 'eval "$(pyenv init -)"' >> /etc/profile
+echo 'eval "$(pyenv virtualenv-init -)"' >> /etc/profile
+
+source /etc/profile
+
+pyenv install 3.12.4
 
 # Install hacking tools
 
@@ -62,15 +101,37 @@ apt install -y \
 	exiftool \
 	lynx
 
+# Install TheHarvester
+
+pyenv virtualenv 3.12.4 theHarvester_venv
+
+git clone https://github.com/laramies/theHarvester.git
+
+pyenv activate theHarvester_venv
+cd ./theHarvester/
+pip install .
+cd ../
+pyenv deactivate
+
+mv ./theHarvester/ /usr/local/share/
+
+echo -e '#!/bin/bash\nsource /etc/profile\npyenv activate theHarvester_venv\ncd /usr/local/share/theHarvester\n./theHarvester.py "$@"\npyenv deactivate' > /usr/local/bin/theHarvester
+
+chmod +x /usr/local/bin/theHarvester
+
 # Clone repository
 
 git clone https://github.com/Kyoto-01/Cyberia_OS.git
 
 # Configure groups
 
+echo 'EXTRA_GROUPS="users pyenv"' >> /etc/adduser.conf
+echo 'ADD_EXTRA_GROUPS=1' >> /etc/adduser.conf
+
 for user in $( ls /home );do
 	usermod -aG sudo $user
 	usermod -aG wireshark $user
+	usermod -aG pyenv $user
 done
 
 # Configure Theme
