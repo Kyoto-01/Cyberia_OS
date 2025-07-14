@@ -98,13 +98,13 @@ mkdir -p /opt/pyenv/
 groupadd pyenv
 usermod -aG pyenv root
 chown root:pyenv /opt/pyenv
-chmod g+s /opt/pyenv
+chmod -R g+s /opt/pyenv
 
 git clone https://github.com/pyenv/pyenv.git /opt/pyenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git /opt/pyenv/plugins/pyenv-virtualenv
 
-mkdir /opt/pyenv/shims
-chmod -R g+w /opt/pyenv/shims
+mkdir /opt/pyenv/shims /opt/pyenv/versions/
+chmod -R g+w /opt/pyenv/shims /opt/pyenv/versions/
 
 export PYENV_ROOT="/opt/pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
