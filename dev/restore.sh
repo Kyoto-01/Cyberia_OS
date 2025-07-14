@@ -6,8 +6,9 @@ rm -rf /opt/pyenv
 rm -rf /usr/local/go
 rm -rf /usr/local/share/theHarvester
 rm -f /usr/local/bin/theHarvester
-rm -f ../google-chrome-stable_current_amd64.deb*
-rm -rf ../theHarvester
+rm -f ./google-chrome-stable_current_amd64.deb*
+rm -rf ./theHarvester
+rm -rf ./Cyberia_OS
 
 echo '
 # ~/.profile: executed by the command interpreter for login shells.

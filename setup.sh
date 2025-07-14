@@ -134,7 +134,7 @@ pyenv deactivate
 
 mv ./theHarvester/ /usr/local/share/
 
-echo -e '#!/bin/bash\npyenv activate theHarvester_venv\ncd /usr/local/share/theHarvester\n./theHarvester.py "$@"\npyenv deactivate' > /usr/local/bin/theHarvester
+echo -e '#!/bin/bash\nsource ~/.profile\npyenv activate theHarvester_venv\ncd /usr/local/share/theHarvester\n./theHarvester.py "$@"\npyenv deactivate' > /usr/local/bin/theHarvester
 
 chmod +x /usr/local/bin/theHarvester
 
@@ -163,6 +163,8 @@ mkdir -p /etc/skel/.config/pcmanfm-qt/lxqt/
 cp ./Cyberia_OS/images/wallpaper.png /usr/share/images/desktop-base/${OS_NAME}_wallpaper.png
 
 cp ./Cyberia_OS/config/pcmanfm-qt/settings.conf /etc/skel/.config/pcmanfm-qt/lxqt/
+
+cp ./Cyberia_OS/config/pcmanfm-qt/settings.conf /root/.config/pcmanfm-qt/lxqt/
 
 for user in $( ls /home );do
 	cp ./Cyberia_OS/config/pcmanfm-qt/settings.conf /home/$user/.config/pcmanfm-qt/lxqt/
