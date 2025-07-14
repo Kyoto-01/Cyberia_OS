@@ -6,9 +6,31 @@ set -e
 
 OS_NAME="Cyberia"
 
-# Update
+# Update repositories
 
 apt update
+
+# Install git
+
+apt install -y git
+
+# Clone the project repository
+
+git clone https://github.com/Kyoto-01/Cyberia_OS.git
+
+# Update session config files
+
+cp ./Cyberia_OS/config/session/*.profile /etc/profile.d/
+cp ./Cyberia_OS/config/session/profile /etc/skel/.profile
+cp ./Cyberia_OS/config/session/bashrc /etc/skel/.bashrc
+
+cp ./Cyberia_OS/config/session/profile /root/.profile
+cp ./Cyberia_OS/config/session/bashrc /root/.bashrc
+
+for user in $( ls /home );do
+	cp ./Cyberia_OS/config/session/profile /home/$user/.profile
+	cp ./Cyberia_OS/config/session/bashrc /home/$user/.bashrc
+done
 
 # Install GUI
 
@@ -25,7 +47,6 @@ apt install -y \
 	tree \
 	sudo \
 	vim \
-	git \
 	bash-completion \
 	man-db
 
@@ -85,13 +106,11 @@ git clone https://github.com/pyenv/pyenv-virtualenv.git /opt/pyenv/plugins/pyenv
 mkdir /opt/pyenv/shims
 chmod -R g+w /opt/pyenv/shims
 
-echo 'export PYENV_ROOT="/opt/pyenv"' >> /etc/profile
-echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> /etc/profile
-echo 'eval "$(pyenv init --path)"' >> /etc/profile
-echo 'eval "$(pyenv init -)"' >> /etc/profile
-echo 'eval "$(pyenv virtualenv-init -)"' >> /etc/profile
-
-source /etc/profile
+export PYENV_ROOT="/opt/pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 pyenv install 3.12.4
 
@@ -115,17 +134,13 @@ pyenv deactivate
 
 mv ./theHarvester/ /usr/local/share/
 
-echo -e '#!/bin/bash\nsource /etc/profile\npyenv activate theHarvester_venv\ncd /usr/local/share/theHarvester\n./theHarvester.py "$@"\npyenv deactivate' > /usr/local/bin/theHarvester
+echo -e '#!/bin/bash\npyenv activate theHarvester_venv\ncd /usr/local/share/theHarvester\n./theHarvester.py "$@"\npyenv deactivate' > /usr/local/bin/theHarvester
 
 chmod +x /usr/local/bin/theHarvester
 
-# Clone repository
-
-git clone https://github.com/Kyoto-01/Cyberia_OS.git
-
 # Configure groups
 
-echo 'EXTRA_GROUPS="users pyenv"' >> /etc/adduser.conf
+echo 'EXTRA_GROUPS="users pyenv go"' >> /etc/adduser.conf
 echo 'ADD_EXTRA_GROUPS=1' >> /etc/adduser.conf
 
 for user in $( ls /home );do
