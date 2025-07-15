@@ -48,7 +48,8 @@ apt install -y \
 	sudo \
 	vim \
 	bash-completion \
-	man-db
+	man-db \
+	acl
 
 # Install Google Chrome
 
@@ -98,13 +99,15 @@ mkdir -p /opt/pyenv/
 groupadd pyenv
 usermod -aG pyenv root
 chown root:pyenv /opt/pyenv
-chmod -R g+s /opt/pyenv
+chmod g+s /opt/pyenv
 
 git clone https://github.com/pyenv/pyenv.git /opt/pyenv
 git clone https://github.com/pyenv/pyenv-virtualenv.git /opt/pyenv/plugins/pyenv-virtualenv
 
 mkdir /opt/pyenv/shims /opt/pyenv/versions/
-chmod -R g+w /opt/pyenv/shims /opt/pyenv/versions/
+chmod -R g+rw /opt/pyenv/shims /opt/pyenv/versions/
+setfacl -d -m g:pyenv:rw /opt/pyenv/shims
+setfacl -d -m g:pyenv:rw /opt/pyenv/versions/
 
 export PYENV_ROOT="/opt/pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
