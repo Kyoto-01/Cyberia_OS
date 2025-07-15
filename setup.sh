@@ -143,7 +143,7 @@ chmod +x /usr/local/bin/theHarvester
 
 # Configure groups
 
-echo 'EXTRA_GROUPS="users pyenv go"' >> /etc/adduser.conf
+echo 'EXTRA_GROUPS="users sudo wireshark pyenv"' >> /etc/adduser.conf
 echo 'ADD_EXTRA_GROUPS=1' >> /etc/adduser.conf
 
 for user in $( ls /home );do
