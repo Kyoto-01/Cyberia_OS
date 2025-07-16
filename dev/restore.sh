@@ -11,6 +11,7 @@ rm -rf ./theHarvester
 rm -rf ./Cyberia_OS
 rm -f ./go*linux-amd64.tar.gz
 rm -rf ~/.theHarvester/
+rm -rf /usr/local/share/SecLists
 
 echo '
 # ~/.profile: executed by the command interpreter for login shells.

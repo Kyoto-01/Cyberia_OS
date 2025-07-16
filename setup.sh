@@ -164,6 +164,12 @@ chmod +x /usr/local/bin/theHarvester
 
 go install github.com/ffuf/ffuf/v2@latest
 
+# Install SecLists
+
+git clone https://github.com/danielmiessler/SecLists.git
+
+mv ./SecLists /usr/local/share/
+
 # Configure groups
 
 echo 'EXTRA_GROUPS="users sudo wireshark pyenv"' >> /etc/adduser.conf
