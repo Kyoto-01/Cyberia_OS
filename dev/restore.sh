@@ -9,6 +9,8 @@ rm -f /usr/local/bin/theHarvester
 rm -f ./google-chrome-stable_current_amd64.deb*
 rm -rf ./theHarvester
 rm -rf ./Cyberia_OS
+rm -f ./go*linux-amd64.tar.gz
+rm -rf ~/.theHarvester/
 
 echo '
 # ~/.profile: executed by the command interpreter for login shells.

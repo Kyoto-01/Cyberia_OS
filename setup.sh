@@ -117,6 +117,25 @@ eval "$(pyenv virtualenv-init -)"
 
 pyenv install 3.12.4
 
+# Install Golang
+
+addgroup go
+usermod -aG go root
+
+mkdir -p /usr/local/go/packages /usr/local/go/bin
+chown -R root:go /usr/local/go
+chmod -R g+s /usr/local/go
+chmod -R g+rwx /usr/local/go/packages /usr/local/go/bin
+setfacl -d -m g:go:rwx /usr/local/go/packages
+setfacl -d -m g:go:rwx /usr/local/go/bin
+
+wget https://go.dev/dl/go1.24.5.linux-amd64.tar.gz
+tar -C /usr/local/ -xvzf go1.24.5.linux-amd64.tar.gz
+
+export GOBIN=/usr/local/go/bin
+export GOPATH=/usr/local/go/packages
+export PATH=$PATH:$GOBIN
+
 # Install hacking tools
 
 apt install -y \
@@ -140,6 +159,10 @@ mv ./theHarvester/ /usr/local/share/
 echo -e '#!/bin/bash\nsource ~/.profile\npyenv activate theHarvester_venv\ncd /usr/local/share/theHarvester\n./theHarvester.py "$@"\npyenv deactivate' > /usr/local/bin/theHarvester
 
 chmod +x /usr/local/bin/theHarvester
+
+# Install ffuf
+
+go install github.com/ffuf/ffuf/v2@latest
 
 # Configure groups
 
@@ -182,8 +205,9 @@ done
 # Delete temporary files
 
 rm -rf \
-	Cyberia_OS/ \
-	google-chrome-stable_current_amd64.deb
+	./Cyberia_OS/ \
+	./google-chrome-stable_current_amd64.deb \
+	./go*linux-amd64.tar.gz
 
 # Reboot
 
