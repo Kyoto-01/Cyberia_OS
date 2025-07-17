@@ -136,6 +136,17 @@ export GOBIN=/usr/local/go/bin
 export GOPATH=/usr/local/go/packages
 export PATH=$PATH:$GOBIN
 
+# Install JDK
+
+mkdir -p /opt/java/
+
+wget https://download.oracle.com/java/24/latest/jdk-24_linux-x64_bin.tar.gz
+
+tar -xvzf jdk-24_linux-x64_bin.tar.gz -C /opt/java
+
+export JAVA_HOME=/opt/java/jdk-24.0.2
+export PATH=$JAVA_HOME/bin:$PATH
+
 # Install hacking tools
 
 apt install -y \
@@ -163,6 +174,12 @@ chmod +x /usr/local/bin/theHarvester
 # Install ffuf
 
 go install github.com/ffuf/ffuf/v2@latest
+
+# Install OWASP ZAP
+
+wget https://github.com/zaproxy/zaproxy/releases/download/v2.16.1/ZAP_2_16_1_unix.sh
+
+./ZAP_2_16_1_unix.sh
 
 # Install SecLists
 
@@ -213,7 +230,9 @@ done
 rm -rf \
 	./Cyberia_OS/ \
 	./google-chrome-stable_current_amd64.deb \
-	./go*linux-amd64.tar.gz
+	./go*linux-amd64.tar.gz \
+	./ZAP_*_unix.sh \
+	./jdk-*_linux-x64_bin.tar.gz
 
 # Reboot
 

@@ -12,6 +12,9 @@ rm -rf ./Cyberia_OS
 rm -f ./go*linux-amd64.tar.gz
 rm -rf ~/.theHarvester/
 rm -rf /usr/local/share/SecLists
+rm -f ./ZAP_*_unix.sh
+rm -f ./jdk-*_linux-x64_bin.tar.gz
+rm -f /opt/java
 
 echo '
 # ~/.profile: executed by the command interpreter for login shells.
