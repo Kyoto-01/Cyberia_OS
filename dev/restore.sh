@@ -5,16 +5,18 @@ delgroup go
 rm -rf /opt/pyenv
 rm -rf /usr/local/go
 rm -rf /usr/local/share/theHarvester
-rm -f /usr/local/bin/theHarvester
-rm -f ./google-chrome-stable_current_amd64.deb*
+rm -rf /usr/local/bin/theHarvester
+rm -rf ./google-chrome-stable_current_amd64.deb*
 rm -rf ./theHarvester
 rm -rf ./Cyberia_OS
-rm -f ./go*linux-amd64.tar.gz
+rm -rf ./go*linux-amd64.tar.gz
 rm -rf ~/.theHarvester/
 rm -rf /usr/local/share/SecLists
-rm -f ./ZAP_*_unix.sh
-rm -f ./jdk-*_linux-x64_bin.tar.gz
-rm -f /opt/java
+rm -rf ./ZAP_*_unix.sh
+rm -rf ./jdk-*_linux-x64_bin.tar.gz
+rm -rf /opt/java
+rm -rf ./ZAP_*_Linux.tar.gz
+rm -rf /opt/zap
 
 echo '
 # ~/.profile: executed by the command interpreter for login shells.

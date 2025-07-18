@@ -177,11 +177,11 @@ go install github.com/ffuf/ffuf/v2@latest
 
 # Install OWASP ZAP
 
-wget https://github.com/zaproxy/zaproxy/releases/download/v2.16.1/ZAP_2_16_1_unix.sh
+wget https://github.com/zaproxy/zaproxy/releases/download/v2.16.1/ZAP_2.16.1_Linux.tar.gz
 
-chmod +x ./ZAP_2_16_1_unix.sh
+mkdir -p /opt/zap/
 
-./ZAP_2_16_1_unix.sh -q -dir /opt/zap
+tar -xvzf ZAP_2.16.1_Linux.tar.gz -c /opt/zap --strip-components=1
 
 export PATH=$PATH:/opt/zap
 
@@ -236,7 +236,8 @@ rm -rf \
 	./google-chrome-stable_current_amd64.deb \
 	./go*linux-amd64.tar.gz \
 	./ZAP_*_unix.sh \
-	./jdk-*_linux-x64_bin.tar.gz
+	./jdk-*_linux-x64_bin.tar.gz \
+	./ZAP_*_Linux.tar.gz 
 
 # Reboot
 
