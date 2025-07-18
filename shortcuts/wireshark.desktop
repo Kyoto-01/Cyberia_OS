@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Wireshark
+Comment=Wireshark
+Exec=wireshark
+Icon=wireshark
+Terminal=false
+Type=Application
+Categories=Network;
+

@@ -26,6 +26,15 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# Aliasses
+
+alias chrome='google-chrome --force-dark-mode --enable-features=WebContentsForceDark'
+alias chrome-anon='google-chrome --force-dark-mode --enable-features=WebContentsForceDark --incognito'
+alias firefox='GTK_THEME=Adwaita-dark firefox'
+alias firefox-anon='GTK_THEME=Adwaita-dark firefox --private-window'
+
+# Imports
+
 source /etc/profile.d/pyenv.profile
 source /etc/profile.d/go.profile
 source /etc/profile.d/jdk.profile

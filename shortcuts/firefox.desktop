@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Firefox
+Comment=Firefox
+Exec=env GTK_THEME=Adwaita-dark firefox
+Icon=firefox
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
+

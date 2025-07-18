@@ -230,6 +230,18 @@ for user in $( ls /home );do
 	cp ./Cyberia_OS/config/pcmanfm-qt/settings.conf /home/$user/.config/pcmanfm-qt/lxqt/
 done
 
+# Create Shortcuts
+
+chmod +x ./Cyberia_OS/shortcuts/*.desktop
+
+mkdir /root/Desktop/
+cp ./Cyberia_OS/shortcuts/*.desktop /root/Desktop/
+
+for user in $( ls /home );do
+	mkdir /home/$user/Desktop/
+	cp ./Cyberia_OS/shortcuts/*.desktop /home/$user/Desktop/
+done
+
 # Delete temporary files
 
 rm -rf \

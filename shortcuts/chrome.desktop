@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Chrome
+Comment=Google Chrome
+Exec=google-chrome --force-dark-mode --enable-features=WebContentsForceDark
+Icon=google-chrome
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
