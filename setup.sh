@@ -234,11 +234,11 @@ done
 
 chmod +x ./Cyberia_OS/shortcuts/*.desktop
 
-mkdir /root/Desktop/
+mkdir -p /root/Desktop/
 cp ./Cyberia_OS/shortcuts/*.desktop /root/Desktop/
 
 for user in $( ls /home );do
-	mkdir /home/$user/Desktop/
+	mkdir -p /home/$user/Desktop/
 	cp ./Cyberia_OS/shortcuts/*.desktop /home/$user/Desktop/
 done
 
