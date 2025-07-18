@@ -204,13 +204,16 @@ done
 
 cp ./Cyberia_OS/config/lxqt/lxqt.conf /etc/skel/.config/lxqt/
 cp ./Cyberia_OS/config/lxqt/panel.conf /etc/skel/.config/lxqt/
+cp ./Cyberia_OS/config/lxqt/session.conf /etc/skel/.config/lxqt/
 
 cp ./Cyberia_OS/config/lxqt/lxqt.conf /root/.config/lxqt/
 cp ./Cyberia_OS/config/lxqt/panel.conf /root/.config/lxqt/
+cp ./Cyberia_OS/config/lxqt/session.conf /root/.config/lxqt/
 
 for user in $( ls /home );do
 	cp ./Cyberia_OS/config/lxqt/lxqt.conf /home/$user/.config/lxqt/
 	cp ./Cyberia_OS/config/lxqt/panel.conf /home/$user/.config/lxqt/
+	cp ./Cyberia_OS/config/lxqt/session.conf /home/$user/.config/lxqt/
 done
 
 # Configure wallpaper
