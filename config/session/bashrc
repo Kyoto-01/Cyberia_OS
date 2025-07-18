@@ -119,4 +119,5 @@ fi
 source /etc/profile.d/pyenv.profile
 source /etc/profile.d/go.profile
 source /etc/profile.d/jdk.profile
+source /etc/profile.d/zap.profile
 

@@ -181,9 +181,7 @@ wget https://github.com/zaproxy/zaproxy/releases/download/v2.16.1/ZAP_2.16.1_Lin
 
 mkdir -p /opt/zap/
 
-tar -xvzf ZAP_2.16.1_Linux.tar.gz -c /opt/zap --strip-components=1
-
-export PATH=$PATH:/opt/zap
+tar -xvzf ZAP_2.16.1_Linux.tar.gz -c /opt/zap
 
 # Install SecLists
 
