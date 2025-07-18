@@ -179,7 +179,11 @@ go install github.com/ffuf/ffuf/v2@latest
 
 wget https://github.com/zaproxy/zaproxy/releases/download/v2.16.1/ZAP_2_16_1_unix.sh
 
-./ZAP_2_16_1_unix.sh
+chmod +x ./ZAP_2_16_1_unix.sh
+
+./ZAP_2_16_1_unix.sh -q -dir /opt/zap
+
+export PATH=$PATH:/opt/zap
 
 # Install SecLists
 
