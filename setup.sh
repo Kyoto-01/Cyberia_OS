@@ -232,14 +232,13 @@ done
 
 # Create Shortcuts
 
-chmod +x ./Cyberia_OS/shortcuts/*.desktop
-
 mkdir -p /root/Desktop/
 cp ./Cyberia_OS/shortcuts/*.desktop /root/Desktop/
 
 for user in $( ls /home );do
 	mkdir -p /home/$user/Desktop/
 	cp ./Cyberia_OS/shortcuts/*.desktop /home/$user/Desktop/
+	chown $user:$user /home/$user/Desktop/*.desktop
 done
 
 # Delete temporary files
