@@ -49,7 +49,9 @@ apt install -y \
 	vim \
 	bash-completion \
 	man-db \
-	acl
+	acl \
+	wget \
+	curl
 
 # Install Google Chrome
 
@@ -65,8 +67,6 @@ apt install -y \
 	ncat \
 	telnet \
 	nmap \
-	wget \
-	curl \
 	net-tools \
 	bind9-dnsutils \
 	tcpdump \
@@ -202,15 +202,18 @@ done
 
 # Configure Theme
 
+mkdir -p /etc/skel/.config/lxqt/
 cp ./Cyberia_OS/config/lxqt/lxqt.conf /etc/skel/.config/lxqt/
 cp ./Cyberia_OS/config/lxqt/panel.conf /etc/skel/.config/lxqt/
 cp ./Cyberia_OS/config/lxqt/session.conf /etc/skel/.config/lxqt/
 
+mkdir -p /root/.config/lxqt/
 cp ./Cyberia_OS/config/lxqt/lxqt.conf /root/.config/lxqt/
 cp ./Cyberia_OS/config/lxqt/panel.conf /root/.config/lxqt/
 cp ./Cyberia_OS/config/lxqt/session.conf /root/.config/lxqt/
 
 for user in $( ls /home );do
+	mkdir -p /home/$user/.config/lxqt/
 	cp ./Cyberia_OS/config/lxqt/lxqt.conf /home/$user/.config/lxqt/
 	cp ./Cyberia_OS/config/lxqt/panel.conf /home/$user/.config/lxqt/
 	cp ./Cyberia_OS/config/lxqt/session.conf /home/$user/.config/lxqt/
@@ -219,6 +222,7 @@ done
 # Configure wallpaper
 
 mkdir -p /etc/skel/.config/pcmanfm-qt/lxqt/
+mkdir -p /root/.config/pcmanfm-qt/lxqt/
 
 cp ./Cyberia_OS/images/wallpaper.png /usr/share/images/desktop-base/${OS_NAME}_wallpaper.png
 
@@ -227,6 +231,7 @@ cp ./Cyberia_OS/config/pcmanfm-qt/settings.conf /etc/skel/.config/pcmanfm-qt/lxq
 cp ./Cyberia_OS/config/pcmanfm-qt/settings.conf /root/.config/pcmanfm-qt/lxqt/
 
 for user in $( ls /home );do
+	mkdir -p /home/$user/.config/pcmanfm-qt/lxqt/
 	cp ./Cyberia_OS/config/pcmanfm-qt/settings.conf /home/$user/.config/pcmanfm-qt/lxqt/
 done
 
