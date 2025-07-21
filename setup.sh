@@ -255,9 +255,14 @@ done
 
 # Create Shortcuts
 
+rm -rf \
+	/usr/share/applications/google-chrome.desktop \
+	/usr/share/applications/firefox-esr.desktop
+
+cp ./Cyberia_OS/shortcuts/*.desktop /usr/share/applications/
+
 mkdir -p /root/Desktop/
 cp ./Cyberia_OS/shortcuts/*.desktop /root/Desktop/
-cp ./Cyberia_OS/shortcuts/*.desktop /usr/share/applications/
 
 for user in $( ls /home );do
 	mkdir -p /home/$user/Desktop/
