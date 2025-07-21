@@ -16,7 +16,10 @@ rm -rf ./ZAP_*_unix.sh
 rm -rf ./jdk-*_linux-x64_bin.tar.gz
 rm -rf /opt/java
 rm -rf ./ZAP_*_Linux.tar.gz
-rm -rf /opt/zap
+rm -rf /usr/local/share/zap
+rm -rf /usr/local/bin/zap
+rm -rf /usr/local/share/burpsuite
+rm -rf /usr/local/bin/burpsuite
 
 echo '
 # ~/.profile: executed by the command interpreter for login shells.

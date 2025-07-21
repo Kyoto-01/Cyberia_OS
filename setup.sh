@@ -175,13 +175,31 @@ chmod +x /usr/local/bin/theHarvester
 
 go install github.com/ffuf/ffuf/v2@latest
 
+# Install Burp Suite
+
+mkdir -p /usr/local/share/burpsuite/
+
+wget "https://portswigger-cdn.net/burp/releases/download?product=community&version=2025.6.4&type=Jar" -O /usr/local/share/burpsuite/burpsuite_community_linux_v2025_6_4.jar
+
+echo -e "#!/bin/bash\n/opt/java/jdk-24.0.2/bin/java -jar /usr/local/share/burpsuite/burpsuite_community_linux_v2025_6_4.jar" > /usr/local/share/burpsuite/burpsuite
+
+chmod +x /usr/local/share/burpsuite/burpsuite
+
+ln -s /usr/local/share/burpsuite/burpsuite /usr/local/bin/burpsuite
+
 # Install OWASP ZAP
 
 wget https://github.com/zaproxy/zaproxy/releases/download/v2.16.1/ZAP_2.16.1_Linux.tar.gz
 
-mkdir -p /opt/zap/
+mkdir -p /usr/local/share/zap/
 
-tar -xvzf ZAP_2.16.1_Linux.tar.gz -C /opt/zap
+tar -xvzf ZAP_2.16.1_Linux.tar.gz -C /usr/local/share/zap/
+
+echo -e "#!/bin/bash\n/opt/java/jdk-24.0.2/bin/java -jar /usr/local/share/zap/ZAP_2.16.1_Linux/zap-2.16.1.jar" > /usr/local/share/zap/zap
+
+chmod +x /usr/local/share/zap/zap
+
+ln -s /usr/local/share/zap/zap /usr/local/bin/zap
 
 # Install SecLists
 
@@ -239,6 +257,7 @@ done
 
 mkdir -p /root/Desktop/
 cp ./Cyberia_OS/shortcuts/*.desktop /root/Desktop/
+cp ./Cyberia_OS/shortcuts/*.desktop /usr/share/applications/
 
 for user in $( ls /home );do
 	mkdir -p /home/$user/Desktop/

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=ZAP
+Comment=OWASP ZAP
+Exec=/usr/local/bin/zap
+Icon=zaproxy
+Terminal=false
+Type=Application
+Categories=Network

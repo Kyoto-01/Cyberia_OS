@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Burp Suite
+Comment=Burp Suite Community
+Exec=/usr/local/bin/burpsuite
+Icon=burpsuite
+Terminal=false
+Type=Application
+Categories=Network
