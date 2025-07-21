@@ -76,6 +76,7 @@ apt install -y \
 # Install dev utils
 
 apt install -y \
+	python3.11-venv \
 	make \
 	build-essential \
 	manpages-dev \
