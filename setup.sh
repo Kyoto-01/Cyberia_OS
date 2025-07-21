@@ -152,7 +152,8 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 apt install -y \
 	exiftool \
-	lynx
+	lynx \
+	wafw00f
 
 # Install TheHarvester
 
