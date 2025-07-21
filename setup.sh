@@ -195,7 +195,7 @@ mkdir -p /usr/local/share/zap/
 
 tar -xvzf ZAP_2.16.1_Linux.tar.gz -C /usr/local/share/zap/
 
-echo -e "#!/bin/bash\n/opt/java/jdk-24.0.2/bin/java -jar /usr/local/share/zap/ZAP_2.16.1_Linux/zap-2.16.1.jar" > /usr/local/share/zap/zap
+echo -e "#!/bin/bash\n/opt/java/jdk-24.0.2/bin/java -jar /usr/local/share/zap/ZAP_2.16.1/zap-2.16.1.jar" > /usr/local/share/zap/zap
 
 chmod +x /usr/local/share/zap/zap
 
