@@ -148,6 +148,16 @@ tar -xvzf jdk-24_linux-x64_bin.tar.gz -C /opt/java
 export JAVA_HOME=/opt/java/jdk-24.0.2
 export PATH=$JAVA_HOME/bin:$PATH
 
+# Install ruby
+
+apt install -y \
+	ruby \
+	ruby-dev
+
+# Install Bundler
+
+gem install bundler
+
 # Install hacking tools
 
 apt install -y \
@@ -155,7 +165,12 @@ apt install -y \
 	lynx \
 	wafw00f \
 	sqlmap \
-	john
+	john \
+	hydra \
+	whois \
+	python3-scapy \
+	hping3 \
+	whatweb
 
 # Install TheHarvester
 
@@ -182,6 +197,21 @@ go install github.com/ffuf/ffuf/v2@latest
 # Install Feroxbuster
 
 curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/main/install-nix.sh | bash -s /usr/local/bin
+
+# Install Urlcrazy
+
+mkdir /usr/local/share/urlcrazy
+
+wget https://github.com/urbanadventurer/urlcrazy/archive/refs/tags/v0.7.3.tar.gz -O urlcrazy.tar.gz
+
+tar -xvzf urlcrazy.tar.gz -C /usr/local/share/urlcrazy/ --strip-components=1
+
+cd /usr/local/share/urlcrazy/urlcrazy
+bundle install
+chmod +x urlcrazy
+cd -
+
+ln -s /usr/local/share/urlcrazy/urlcrazy /usr/local/bin/urlcrazy
 
 # Install Burp Suite
 
@@ -218,6 +248,10 @@ wget https://github.com/sullo/nikto/archive/refs/tags/2.5.0.tar.gz -O nikto.tar.
 tar -xvzf nikto.tar.gz --strip-components=1 -C /usr/local/share/nikto/
 
 ln -s /usr/local/share/nikto/program/nikto.pl /usr/local/bin/nikto
+
+# Install Metasploit
+
+curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall
 
 # Install SecLists
 
@@ -297,7 +331,9 @@ rm -rf \
 	./ZAP_*_unix.sh \
 	./jdk-*_linux-x64_bin.tar.gz \
 	./ZAP_*_Linux.tar.gz \
-	./nikto.tar.gz
+	./nikto.tar.gz \
+	./msfinstall \
+	./urlcrazy.tar.gz
 
 # Reboot
 

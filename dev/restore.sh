@@ -4,25 +4,28 @@ delgroup pyenv
 delgroup go
 rm -rf /opt/pyenv
 rm -rf /usr/local/go
-rm -rf /usr/local/share/theHarvester
+rm -rf /usr/local/share/theHarvester/
 rm -rf /usr/local/bin/theHarvester
 rm -rf ./google-chrome-stable_current_amd64.deb*
 rm -rf ./theHarvester
 rm -rf ./Cyberia_OS
 rm -rf ./go*linux-amd64.tar.gz
 rm -rf ~/.theHarvester/
-rm -rf /usr/local/share/SecLists
+rm -rf /usr/local/share/SecLists/
 rm -rf ./ZAP_*_unix.sh
 rm -rf ./jdk-*_linux-x64_bin.tar.gz
 rm -rf /opt/java
 rm -rf ./ZAP_*_Linux.tar.gz
-rm -rf /usr/local/share/zap
+rm -rf /usr/local/share/zap/
 rm -rf /usr/local/bin/zap
-rm -rf /usr/local/share/burpsuite
+rm -rf /usr/local/share/burpsuite/
 rm -rf /usr/local/bin/burpsuite
 rm -rf ./nikto.tar.gz
 rm -rf /usr/local/share/nikto/
 rm -rf /usr/local/bin/nikto
+rm -rf ./urlcrazy.tar.gz
+rm -rf /usr/local/share/urlcrazy/
+rm -rf /usr/local/bin/urlcrazy
 
 echo '
 # ~/.profile: executed by the command interpreter for login shells.
