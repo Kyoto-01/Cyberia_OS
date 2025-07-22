@@ -206,7 +206,7 @@ wget https://github.com/urbanadventurer/urlcrazy/archive/refs/tags/v0.7.3.tar.gz
 
 tar -xvzf urlcrazy.tar.gz -C /usr/local/share/urlcrazy/ --strip-components=1
 
-cd /usr/local/share/urlcrazy/urlcrazy
+cd /usr/local/share/urlcrazy/
 bundle install
 chmod +x urlcrazy
 cd -
