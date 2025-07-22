@@ -205,6 +205,16 @@ chmod +x /usr/local/share/zap/zap
 
 ln -s /usr/local/share/zap/zap /usr/local/bin/zap
 
+# Install Nikto
+
+mkdir -p /usr/local/share/nikto/
+
+wget https://github.com/sullo/nikto/archive/refs/tags/2.5.0.tar.gz -O nikto.tar.gz
+
+tar -xvzf nikto.tar.gz --strip-components=1 -C /usr/local/share/nikto/
+
+ln -s /usr/local/share/nikto/program/nikto.pl /usr/local/bin/nikto
+
 # Install SecLists
 
 git clone https://github.com/danielmiessler/SecLists.git
@@ -282,7 +292,8 @@ rm -rf \
 	./go*linux-amd64.tar.gz \
 	./ZAP_*_unix.sh \
 	./jdk-*_linux-x64_bin.tar.gz \
-	./ZAP_*_Linux.tar.gz 
+	./ZAP_*_Linux.tar.gz \
+	./nikto.tar.gz
 
 # Reboot
 

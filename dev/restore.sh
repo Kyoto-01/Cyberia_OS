@@ -20,6 +20,9 @@ rm -rf /usr/local/share/zap
 rm -rf /usr/local/bin/zap
 rm -rf /usr/local/share/burpsuite
 rm -rf /usr/local/bin/burpsuite
+rm -rf ./nikto.tar.gz
+rm -rf /usr/local/share/nikto/
+rm -rf /usr/local/bin/nikto
 
 echo '
 # ~/.profile: executed by the command interpreter for login shells.
