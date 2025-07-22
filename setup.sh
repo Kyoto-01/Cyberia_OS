@@ -179,6 +179,10 @@ chmod +x /usr/local/bin/theHarvester
 
 go install github.com/ffuf/ffuf/v2@latest
 
+# Install Feroxbuster
+
+curl -sL https://raw.githubusercontent.com/epi052/feroxbuster/main/install-nix.sh | bash -s /usr/local/bin
+
 # Install Burp Suite
 
 mkdir -p /usr/local/share/burpsuite/
