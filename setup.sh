@@ -172,6 +172,10 @@ apt install -y \
 	hping3 \
 	whatweb
 
+# Install hping3
+
+mv /usr/sbin/hping3 /usr/local/bin/
+
 # Install TheHarvester
 
 pyenv virtualenv 3.12.4 theHarvester_venv
@@ -211,7 +215,9 @@ bundle install
 chmod +x urlcrazy
 cd -
 
-ln -s /usr/local/share/urlcrazy/urlcrazy /usr/local/bin/urlcrazy
+echo -e "#!/bin/bash\ncd /usr/local/share/urlcrazy/\n.\\urlcrazy \"\$@\"" > /usr/local/bin/urlcrazy
+
+chmod +x /usr/local/bin/urlcrazy
 
 # Install Burp Suite
 
