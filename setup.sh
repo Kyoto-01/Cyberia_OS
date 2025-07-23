@@ -71,7 +71,10 @@ apt install -y \
 	bind9-dnsutils \
 	tcpdump \
 	wireshark \
-	tor
+	tor \
+	proxychains \
+	traceroute \
+	tcptraceroute
 
 # Install dev utils
 
@@ -170,7 +173,8 @@ apt install -y \
 	whois \
 	python3-scapy \
 	hping3 \
-	whatweb
+	whatweb \
+	aircrack-ng
 
 # Install TheHarvester
 
