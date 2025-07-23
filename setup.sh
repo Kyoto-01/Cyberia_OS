@@ -211,7 +211,7 @@ bundle install
 chmod +x urlcrazy
 cd -
 
-echo -e "#!/bin/bash\ncd /usr/local/share/urlcrazy/\n.\\urlcrazy \"\$@\"" > /usr/local/bin/urlcrazy
+echo -e "#!/bin/bash\ncd /usr/local/share/urlcrazy/\n./urlcrazy \"\$@\"" > /usr/local/bin/urlcrazy
 
 chmod +x /usr/local/bin/urlcrazy
 
