@@ -172,10 +172,6 @@ apt install -y \
 	hping3 \
 	whatweb
 
-# Install hping3
-
-mv /usr/sbin/hping3 /usr/local/bin/
-
 # Install TheHarvester
 
 pyenv virtualenv 3.12.4 theHarvester_venv
