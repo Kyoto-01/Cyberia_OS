@@ -119,6 +119,7 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+pyenv install 3.7
 pyenv install 3.12.4
 
 # Install Golang
@@ -174,7 +175,9 @@ apt install -y \
 	python3-scapy \
 	hping3 \
 	whatweb \
-	aircrack-ng
+	aircrack-ng \
+	httrack \
+	recon-ng
 
 # Install TheHarvester
 
@@ -193,6 +196,76 @@ mv ./theHarvester/ /usr/local/share/
 echo -e '#!/bin/bash\nsource ~/.profile\npyenv activate theHarvester_venv\ncd /usr/local/share/theHarvester\n./theHarvester.py "$@"\npyenv deactivate' > /usr/local/bin/theHarvester
 
 chmod +x /usr/local/bin/theHarvester
+
+# Install Gophish
+
+wget https://github.com/gophish/gophish/releases/download/v0.12.1/gophish-v0.12.1-linux-64bit.zip -O gophish.zip
+
+unzip gophish.zip -d /usr/local/share/gophish/
+
+chmod +x /usr/local/share/gophish/gophish
+
+echo -e "#!/bin/bash\ncd /usr/local/share/gophish/\n./gophish \"\$@\"" > /usr/local/bin/gophish
+
+chmod +x /usr/local/bin/gophish
+
+# Install Spiderfoot
+
+source ~/.profile
+
+mkdir -p /usr/local/share/spiderfoot/
+
+wget https://github.com/smicallef/spiderfoot/archive/v4.0.tar.gz -O spiderfoot.tar.gz
+
+tar zxvf spiderfoot.tar.gz -C /usr/local/share/spiderfoot/ --strip-components=1
+
+cd /usr/local/share/spiderfoot/
+
+chmod +x ./sf.py
+
+pyenv virtualenv 3.7 spiderfoot_venv
+
+pyenv activate spiderfoot_venv
+
+pip3 install -r requirements.txt
+
+pyenv deactivate
+
+echo -e "#!/bin/bash\nsource ~/.profile\ncd /usr/local/share/spiderfoot/\npyenv activate spiderfoot_venv\n./sf.py \"\$@\"\npyenv deactivate" > /usr/local/bin/spiderfoot
+
+chmod +x /usr/local/bin/spiderfoot
+
+# Install Setoolkit
+
+apt install -y \
+	freetds-dev \
+	libkrb5-dev
+
+source ~/.profile
+
+git clone https://github.com/trustedsec/social-engineer-toolkit.git
+
+mv ./social-engineer-toolkit/ /usr/local/share/
+
+mv /usr/local/share/social-engineer-toolkit/ /usr/local/share/setoolkit/
+
+cd /usr/local/share/setoolkit/
+
+chmod +x ./setoolkit
+
+pyenv virtualenv 3.7 setoolkit_venv
+
+pyenv activate setoolkit_venv
+
+pip3 install -r requirements.txt
+
+python setup.py
+
+pyenv deactivate
+
+echo -e "#!/bin/bash\nsource ~/.profile\ncd /usr/local/share/setoolkit/\npyenv activate setoolkit_venv\n./setoolkit \"\$@\"\npyenv deactivate" > /usr/local/bin/setoolkit
+
+chmod +x /usr/local/bin/setoolkit
 
 # Install ffuf
 
@@ -339,7 +412,9 @@ rm -rf \
 	./ZAP_*_Linux.tar.gz \
 	./nikto.tar.gz \
 	./msfinstall \
-	./urlcrazy.tar.gz
+	./urlcrazy.tar.gz \
+	./gophish.zip \
+	./spiderfoot.tar.gz
 
 # Reboot
 

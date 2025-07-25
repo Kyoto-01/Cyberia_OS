@@ -26,6 +26,14 @@ rm -rf /usr/local/bin/nikto
 rm -rf ./urlcrazy.tar.gz
 rm -rf /usr/local/share/urlcrazy/
 rm -rf /usr/local/bin/urlcrazy
+rm -rf /usr/local/share/gophish/
+rm -rf /usr/local/bin/gophish
+rm -rf ./gophish.zip
+rm -rf /usr/local/share/spiderfoot/
+rm -rf /usr/local/bin/spiderfoot
+rm -rf ./spiderfoot.tar.gz
+rm -rf /usr/local/share/setoolkit/
+rm -rf /usr/local/bin/setoolkit
 
 echo '
 # ~/.profile: executed by the command interpreter for login shells.
