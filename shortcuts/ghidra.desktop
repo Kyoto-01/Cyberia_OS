@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Ghidra
+Comment=Gidra Reverse Enginering Tool
+Exec=ghidra
+Icon=ghidra
+Terminal=false
+Type=Application
+Categories=Utility;

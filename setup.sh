@@ -51,7 +51,11 @@ apt install -y \
 	man-db \
 	acl \
 	wget \
-	curl
+	curl \
+	libreoffice \
+	vlc \
+	scrot \
+	gimp
 
 # Install Google Chrome
 
@@ -267,6 +271,18 @@ echo -e "#!/bin/bash\nsource ~/.profile\ncd /usr/local/share/setoolkit/\npyenv a
 
 chmod +x /usr/local/bin/setoolkit
 
+# Install Ghidra
+
+wget https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.4_build/ghidra_11.4_PUBLIC_20250620.zip -O ghidra.zip
+
+unzip ./ghidra.zip -d /usr/local/share/
+
+mv /usr/local/share/ghidra_11.4_PUBLIC/ /usr/local/share/ghidra/
+
+echo -e "#!/bin/bash\nsource ~/.profile\n/usr/local/share/ghidra/ghidraRun" > /usr/local/bin/ghidra
+
+chmod +x /usr/local/bin/ghidra
+
 # Install ffuf
 
 go install github.com/ffuf/ffuf/v2@latest
@@ -414,7 +430,8 @@ rm -rf \
 	./msfinstall \
 	./urlcrazy.tar.gz \
 	./gophish.zip \
-	./spiderfoot.tar.gz
+	./spiderfoot.tar.gz \
+	./ghidra.zip
 
 # Reboot
 

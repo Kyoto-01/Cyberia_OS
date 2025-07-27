@@ -2,7 +2,7 @@
 
 delgroup pyenv
 delgroup go
-rm -rf /opt/pyenv
+rm -rf /opt/pyenv/
 rm -rf /usr/local/go
 rm -rf /usr/local/share/theHarvester/
 rm -rf /usr/local/bin/theHarvester
@@ -34,6 +34,9 @@ rm -rf /usr/local/bin/spiderfoot
 rm -rf ./spiderfoot.tar.gz
 rm -rf /usr/local/share/setoolkit/
 rm -rf /usr/local/bin/setoolkit
+rm -rf /usr/local/bin/ghidra 
+rm -rf /usr/local/share/ghidra/
+rm -rf ./ghidra.zip
 
 echo '
 # ~/.profile: executed by the command interpreter for login shells.
