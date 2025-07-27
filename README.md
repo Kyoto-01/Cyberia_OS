@@ -1,4 +1,4 @@
-![Cyberia OS logo](./images/title.png)
+<img src="./images/title.png" alt="Cyberia OS logo" width=300 />
 
 # Cyberia OS
 
