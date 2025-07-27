@@ -14,6 +14,12 @@ The project offers a script that transforms Debian 12 into a customized version 
 ./setup.sh
 ```
 
+**Preview**
+
+<div align="center">
+    <img src="./images/example.jpg" alt="Cyberia OS Screenshot." width=600 />
+</div>
+
 ## Hacking Tools
 
 * Exiftool
