@@ -72,6 +72,17 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 apt --fix-broken install -y ./google-chrome-stable_current_amd64.deb
 
+mkdir -p /etc/sked/.config/google-chrome/Default/
+cp ./shortcuts/chrome/shortcuts.json /etc/sked/.config/google-chrome/Default/Bookmarks
+
+mkdir -p /root/.config/google-chrome/Default/
+cp ./shortcuts/chrome/shortcuts.json /root/.config/google-chrome/Default/Bookmarks
+
+for user in $( ls /home );do
+	mkdir -p /home/$user/.config/google-chrome/Default/
+	cp ./shortcuts/chrome/shortcuts.json /home/$user/.config/google-chrome/Default/Bookmarks
+done
+
 # Install network utils
 
 apt install -y \
@@ -426,14 +437,14 @@ rm -rf \
 	/usr/share/applications/google-chrome.desktop \
 	/usr/share/applications/firefox-esr.desktop
 
-cp ./Cyberia_OS/shortcuts/*.desktop /usr/share/applications/
+cp ./Cyberia_OS/shortcuts/desktop/*.desktop /usr/share/applications/
 
 mkdir -p /root/Desktop/
-cp ./Cyberia_OS/shortcuts/*.desktop /root/Desktop/
+cp ./Cyberia_OS/shortcuts/desktop/*.desktop /root/Desktop/
 
 for user in $( ls /home );do
 	mkdir -p /home/$user/Desktop/
-	cp ./Cyberia_OS/shortcuts/*.desktop /home/$user/Desktop/
+	cp ./Cyberia_OS/shortcuts/desktop/*.desktop /home/$user/Desktop/
 	chown $user:$user /home/$user/Desktop/*.desktop
 done
 

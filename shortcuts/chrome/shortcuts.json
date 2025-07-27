@@ -1,0 +1,386 @@
+{
+   "checksum": "1e54fbb25d92a354f7aeaf576726429e",
+   "roots": {
+      "bookmark_bar": {
+         "children": [
+	       		{
+	          		"type": "folder",
+	          		"name": "OSINT",
+	          		"children": [
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "OSINT Tools List",
+						"url": "https://github.com/jivoi/awesome-osint"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "BR OSINT Tools List",
+						"url": "https://github.com/osintbrazuca/osint-brazuca"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "OSINT Framework",
+						"url": "https://osintframework.com/"
+					},
+	            			{
+         					"date_added": "13397508108116159",
+	              				"type": "url",
+	              				"name": "Shodan",
+	              				"url": "https://www.shodan.io/"
+	            			},
+	            			{
+         					"date_added": "13397508108116159",
+	              				"type": "url",
+	              				"name": "Censys",
+	              				"url": "https://search.censys.io/"
+	            			},
+					{
+         					"date_added": "13397508108116159",
+	              				"type": "url",
+	              				"name": "Mind-7",
+	              				"url": "https://mind-7.org/"
+	            			},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "ZoomEye",
+						"url": "https://www.zoomeye.ai/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "WayBack Machine",
+						"url": "https://web.archive.org/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "Wappalyzer",
+						"url": "https://www.wappalyzer.com/"
+					}
+	          		]
+	        	},
+			{
+				"type": "folder",
+				"name": "Email",
+				"children": [
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "TempMail",
+						"url": "https://temp-mail.org/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "YopMail",
+						"url": "https://yopmail.com/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "Emkei's Mailer",
+						"url": "https://emkei.cz/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "Proton Mail",
+						"url": "https://proton.me/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "Hunter",
+						"url": "https://hunter.io/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "Have I Been Pwned",
+						"url": "https://haveibeenpwned.com/"
+					}
+				]
+			},
+			{
+				"type": "folder",
+				"name": "DNS",
+				"children": [
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "Free DNS",
+						"url": "https://freedns.afraid.org/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "Duck DNS",
+						"url": "https://www.duckdns.org/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "WHOIS IANA",
+						"url": "https://www.iana.org/whois"
+					}
+				]
+			},
+			{
+				"type": "folder",
+				"name": "Infra",
+				"children": [
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Ifconfig", 
+						"url": "https://ifconfig.me/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "IPinfo", 
+						"url": "https://ipinfo.io/what-is-my-ip"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "BGP Toolkit", 
+						"url": "https://bgp.he.net/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Looking Glass", 
+						"url": "https://lg.he.net/"
+					}
+				]
+			},
+			{
+				"type": "folder",
+				"name": "SocEng",
+				"children": [
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "4Devs",
+						"url": "https://www.4devs.com.br/"
+					}
+				]
+			},
+			{
+				"type": "folder",
+				"name": "Cybersecurity",
+				"children": [
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Exploit DB", 
+						"url": "https://www.exploit-db.com/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "ANY.RUN", 
+						"url": "https://any.run/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "VirusTotal", 
+						"url": "https://www.virustotal.com/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "FortiGuard Labs", 
+						"url": "https://fortiguard.fortinet.com/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Cybermap Kaspersky", 
+						"url": "https://cybermap.kaspersky.com/"
+					}
+				]
+			},
+			{
+				"type": "folder",
+				"name": "AI",
+				"children": [	
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "ChatGPT", 
+						"url": "https://chatgpt.com/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "DeepSeek", 
+						"url": "https://www.deepseek.com/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Gemini", 
+						"url": "https://gemini.google.com/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Grok", 
+						"url": "https://grok.com/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "NotebookLM", 
+						"url": "https://notebooklm.google.com/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "LanguageTool", 
+						"url": "https://languagetool.org/"
+					}
+				]
+			},
+			{
+				"type": "folder",
+				"name": "Search",
+				"children": [
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Google", 
+						"url": "https://www.google.com/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Bing", 
+						"url": "https://www.bing.com/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Yandex", 
+						"url": "https://yandex.com/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Ask", 
+						"url": "https://www.ask.com/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Baidu", 
+						"url": "https://www.baidu.com/"
+					}
+				]
+			},
+			{
+				"type": "folder",
+				"name": "Study",
+				"children": [
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Zlibrary", 
+						"url": "https://www.reddit.com/r/zlibrary/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "TryHackMe",
+						"url": "https://tryhackme.com/"
+					}
+				]
+			},
+			{
+				"type": "folder",
+				"name": "Dark Web",
+				"children": [
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "DarkPad", 
+						"url": "https://darkpad.org/"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Torch", 
+						"url": "http://xmh57jrknzkhv6y3ls3ubitzfqnkrwxhopf5aygthi7d6rplyvk3noyd.onion"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Tordex", 
+						"url": "http://tordexu73joywapk2txdr54jed4imqledpcvcuf75qsas2gwdgksvnyd.onion"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Proton Mail", 
+						"url": "http://protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion"
+					}
+				]
+			},
+			{
+				"type": "folder",
+				"name": "Utils",
+				"children": [
+					{
+         					"date_added": "13397508108116159",
+						"type": "url", 
+						"name": "Lexilogos", 
+						"url": "https://www.lexilogos.com/keyboard/russian.htm"
+					},
+					{
+         					"date_added": "13397508108116159",
+						"type": "url",
+						"name": "RapidTables",
+						"url": "https://www.rapidtables.com/"
+					}
+				]
+			}
+	 ],
+         "date_added": "13397508108116159",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13397508108116159",
+         "date_last_used": "0",
+         "date_modified": "13398021602095119",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13397508108116159",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
+
