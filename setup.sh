@@ -339,6 +339,44 @@ echo -e "#!/bin/bash\ncd /usr/local/share/urlcrazy/\n./urlcrazy \"\$@\"" > /usr/
 
 chmod +x /usr/local/bin/urlcrazy
 
+# Install DotDotPwn
+
+wget "https://github.com/wireghoul/dotdotpwn/archive/refs/tags/3.0.2.tar.gz" -O dotdotpwn.tar.gz
+
+mkdir -p /usr/local/share/dotdotpwn/
+
+tar -xvzf dotdotpwn.tar.gz -C /usr/local/share/dotdotpwn/ --strip-components=1
+
+echo -e "#!/bin/bash\ncd /usr/local/share/dotdotpwn/\n./dotdotpwn.pl \"\$@\"" > /usr/local/bin/dotdotpwn
+
+chmod +x /usr/local/bin/dotdotpwn
+
+# Install XSStrike
+
+source ~/.profile
+
+wget "https://github.com/s0md3v/XSStrike/archive/refs/tags/3.1.6.tar.gz" -O xsstrike.tar.gz
+
+mkdir -p /usr/local/share/xsstrike/
+
+tar -xvzf xsstrike.tar.gz -C /usr/local/share/xsstrike/ --strip-components=1
+
+cd /usr/local/share/xsstrike/
+
+pyenv virtualenv 3.12 xsstrike_venv
+
+pyenv activate xsstrike_venv
+
+pip install -r requirements.txt --break-system-packages
+
+pyenv deactivate
+
+cd -
+
+echo -e "#!/bin/bash\nsource ~/.profile\ncd /usr/local/share/xsstrike/\npyenv activate xsstrike_venv\npython xsstrike.py \"\$@\"\npyenv deactivate" > /usr/local/bin/xsstrike
+
+chmod +x /usr/local/bin/xsstrike
+
 # Install Burp Suite
 
 mkdir -p /usr/local/share/burpsuite/
@@ -463,7 +501,9 @@ rm -rf \
 	./gophish.zip \
 	./spiderfoot.tar.gz \
 	./ghidra.zip \
-	./vscode.deb
+	./vscode.deb \
+	./dotdotpwn.tar.gz \
+	./xsstrike.tar.gz
 
 # Reboot
 

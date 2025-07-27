@@ -38,6 +38,12 @@ rm -rf /usr/local/bin/ghidra
 rm -rf /usr/local/share/ghidra/
 rm -rf ./ghidra.zip
 rm -rf ./vscode.deb
+rm -rf /usr/local/share/dotdotpwn/
+rm -rf /usr/local/bin/dotdotpwn
+rm -rf ./dotdotpwn.tar.gz
+rm -rf /usr/local/share/xsstrike/
+rm -rf /usr/local/bin/xsstrike
+rm -rf ./xsstrike.tar.gz
 
 echo '
 # ~/.profile: executed by the command interpreter for login shells.
