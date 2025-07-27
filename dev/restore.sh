@@ -37,6 +37,7 @@ rm -rf /usr/local/bin/setoolkit
 rm -rf /usr/local/bin/ghidra 
 rm -rf /usr/local/share/ghidra/
 rm -rf ./ghidra.zip
+rm -rf ./vscode.deb
 
 echo '
 # ~/.profile: executed by the command interpreter for login shells.
