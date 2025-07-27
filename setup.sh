@@ -86,6 +86,7 @@ done
 # Install network utils
 
 apt install -y \
+	network-manager-gnome \
 	ipcalc \
 	netcat-openbsd \
 	ncat \
