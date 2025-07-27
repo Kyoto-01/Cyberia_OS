@@ -251,6 +251,8 @@ pip3 install -r requirements.txt
 
 pyenv deactivate
 
+cd -
+
 echo -e "#!/bin/bash\nsource ~/.profile\ncd /usr/local/share/spiderfoot/\npyenv activate spiderfoot_venv\n./sf.py \"\$@\"\npyenv deactivate" > /usr/local/bin/spiderfoot
 
 chmod +x /usr/local/bin/spiderfoot
