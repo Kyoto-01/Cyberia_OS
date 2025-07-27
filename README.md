@@ -1,4 +1,6 @@
-<img src="./images/title.png" alt="Cyberia OS logo" width=300 />
+<div align="center">
+    <img src="./images/title.png" alt="Cyberia OS logo" width=500 />
+</div>
 
 # Cyberia OS
 
