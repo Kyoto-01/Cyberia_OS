@@ -32,6 +32,14 @@ for user in $( ls /home );do
 	cp ./Cyberia_OS/config/session/bashrc /home/$user/.bashrc
 done
 
+# Configure main responses
+
+## For wireshark
+echo "wireshark-common wireshark-common/install-setuid boolean true" | sudo debconf-set-selections
+
+## For vscode
+echo "packagecloud.io/microsoft/vscode vscode/accept-eula select true" | sudo debconf-set-selections
+
 # Install GUI
 
 apt install -y \
@@ -41,7 +49,7 @@ apt install -y \
 
 # Install common utils
 
-apt install -y \
+DEBIAN_FRONTEND=noninteractive apt install -y \
 	firefox-esr \
 	terminator \
 	tree \
@@ -55,7 +63,8 @@ apt install -y \
 	libreoffice \
 	vlc \
 	scrot \
-	gimp
+	gimp \
+	jq
 
 # Install Google Chrome
 
@@ -171,7 +180,7 @@ gem install bundler
 
 wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -O vscode.deb
 
-dpkg -i ./vscode.deb
+DEBIAN_FRONTEND=noninteractive dpkg -i ./vscode.deb
 
 # Install hacking tools
 
