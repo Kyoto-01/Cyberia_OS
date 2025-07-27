@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=VSCode
+Comment=Microsoft Visual Studio Code
+Exec=code
+Icon=visual-studio-code
+Terminal=false
+Type=Application
+Categories=Utility;

@@ -78,7 +78,8 @@ apt install -y \
 	tor \
 	proxychains \
 	traceroute \
-	tcptraceroute
+	tcptraceroute \
+	openvpn
 
 # Install dev utils
 
@@ -165,6 +166,12 @@ apt install -y \
 # Install Bundler
 
 gem install bundler
+
+# Install VSCode
+
+wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -O vscode.deb
+
+dpkg -i ./vscode.deb
 
 # Install hacking tools
 
@@ -431,7 +438,8 @@ rm -rf \
 	./urlcrazy.tar.gz \
 	./gophish.zip \
 	./spiderfoot.tar.gz \
-	./ghidra.zip
+	./ghidra.zip \
+	./vscode.deb
 
 # Reboot
 
