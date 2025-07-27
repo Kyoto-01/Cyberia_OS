@@ -285,6 +285,8 @@ python setup.py
 
 pyenv deactivate
 
+cd -
+
 echo -e "#!/bin/bash\nsource ~/.profile\ncd /usr/local/share/setoolkit/\npyenv activate setoolkit_venv\n./setoolkit \"\$@\"\npyenv deactivate" > /usr/local/bin/setoolkit
 
 chmod +x /usr/local/bin/setoolkit
