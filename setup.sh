@@ -487,6 +487,12 @@ for user in $( ls /home );do
 	chown $user:$user /home/$user/Desktop/*.desktop
 done
 
+# Set Permissions
+
+for user in $( ls /home );do
+	chown -R $user:$user /home/$user/
+done
+
 # Delete temporary files
 
 rm -rf \

@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="./images/title.png" alt="Cyberia OS logo" width=500 />
+    <img src="./images/logo.png" alt="Cyberia OS logo" width=500 />
 </div>
 
 # Cyberia OS
