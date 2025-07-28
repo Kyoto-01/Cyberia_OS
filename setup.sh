@@ -35,10 +35,10 @@ done
 # Configure main responses
 
 ## For wireshark
-echo "wireshark-common wireshark-common/install-setuid boolean true" | sudo debconf-set-selections
+echo "wireshark-common wireshark-common/install-setuid boolean true" | debconf-set-selections
 
 ## For vscode
-echo "packagecloud.io/microsoft/vscode vscode/accept-eula select true" | sudo debconf-set-selections
+echo "packagecloud.io/microsoft/vscode vscode/accept-eula select true" | debconf-set-selections
 
 # Install GUI
 
