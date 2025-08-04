@@ -1,1 +1,4 @@
-* ADD: Install the "dnsenum" tool;
+* ADD: Install the "dnsenum" tool for DNS recon;
+* ADD: Install the "dnsrecon" tool for DNS recon;
+* ADD: Install the "fierce" tool for DNS recon;
+* ADD: Put "cert.sh" link in the "Infra" category of Chrome shortcuts;
