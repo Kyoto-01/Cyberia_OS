@@ -4,8 +4,7 @@
 
 # Cyberia OS
 
-Cyberia OS emerges as a lighter, leaner alternative to Kali Linux and other distributions geared toward penetration testing and hacking.
-The project offers a script that transforms Debian 12 into a customized version of Cyberia OS, adding essential tools and tweaks for security testing. It also provides ready-to-use .iso images and virtual machines, making it easy to run the distro anywhere, anytime.
+Cyberia OS stands out as a streamlined, lightweight alternative to Kali Linux and other penetration testing distributions. The project features a comprehensive script that converts Debian 12 into a tailored Cyberia OS environment, preloaded with essential security tools and optimizations for penetration testing. Additionally, ready-to-use virtual machines are provided, enabling seamless deployment and testing across different platforms anytime, anywhere.
 
 **Usage**: 
 
