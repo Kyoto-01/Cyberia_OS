@@ -5,10 +5,11 @@
 * ADD: Put "www.xshellz.com" link in the "Infra" category os Chrome shortcuts;
 * UPDATE: Replace "scrot" by "maim" for screenshots;
 * ADD: Put "Wappalyzer" as a Chrome extension;
-* ADD: Put "https://github.com/Endermanch/MalwareDatabase" link in the "Malware" category of Chrome shotcuts.
-* ADD: Put "https://github.com/ytisf/theZoo/tree/master" link in the "Malware" category of Chrome shotcuts.
-* ADD: Install the "fping" tool for Ping Sweep.
-* ADD: Put "https://www.onworks.net/os-distributions" link in "Qick Fix" category of chrome shortcuts.
-* ADD: Put "https://www.ransomlook.io/" link in "Leaks" category of chrome shortcuts.
-* ADD: Put "https://hostedscan.com/" link in "Qick Fix" category of chrome shortcuts.
-* ADD: Put "https://cuckoo.cert.ee/" link in "Cybersecurity" category of chrome shortcuts.
+* ADD: Put "https://github.com/Endermanch/MalwareDatabase" link in the "Malware" category of Chrome shotcuts;
+* ADD: Put "https://github.com/ytisf/theZoo/tree/master" link in the "Malware" category of Chrome shotcuts;
+* ADD: Install the "fping" tool for Ping Sweep;
+* ADD: Put "https://www.onworks.net/os-distributions" link in "Qick Fix" category of chrome shortcuts;
+* ADD: Put "https://www.ransomlook.io/" link in "Leaks" category of chrome shortcuts;
+* ADD: Put "https://hostedscan.com/" link in "Qick Fix" category of chrome shortcuts;
+* ADD: Put "https://cuckoo.cert.ee/" link in "Cybersecurity" category of chrome shortcuts;
+* ADD: Install "rdesktop" tool for remote connection.
